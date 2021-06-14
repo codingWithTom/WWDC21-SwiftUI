@@ -11,7 +11,7 @@ import SwiftUI
 struct WWDC21App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
