@@ -9,14 +9,38 @@ import SwiftUI
 
 struct LoginView: View {
   var colors = [Color.orange, .cyan, .brown, .pink, .yellow, .blue, .red, .green]
+  @StateObject private var viewModel = LoginViewModel()
   
   var body: some View {
-    VStack {
-      title
-      canvas
-      Spacer()
-      Spacer()
-      terms
+    NavigationView {
+      ZStack {
+        NavigationLink("", destination: HomeView(), isActive: $viewModel.moveToNextView)
+        VStack {
+          title
+          canvas
+          Spacer()
+          continueButton
+          if let message = viewModel.errorMessage {
+            Text(message)
+              .foregroundColor(.red)
+          }
+          Spacer()
+          terms
+        }
+      }
+      .navigationBarHidden(true)
+    }
+  }
+  
+  @ViewBuilder
+  private var continueButton: some View {
+    if viewModel.isLoading {
+      ProgressView()
+    } else {
+      Button(action: { viewModel.didTapContinue() }) {
+        Text("Continue")
+          .font(.largeTitle)
+      }
     }
   }
   

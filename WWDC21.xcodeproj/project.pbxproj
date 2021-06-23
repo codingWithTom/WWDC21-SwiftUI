@@ -22,6 +22,9 @@
 		4086AB5B267CD32E00A932F9 /* image7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4086AB51267CD32E00A932F9 /* image7.png */; };
 		4086AB5C267CD32E00A932F9 /* image8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4086AB52267CD32E00A932F9 /* image8.png */; };
 		4086AB5D267CD32E00A932F9 /* image9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4086AB53267CD32E00A932F9 /* image9.png */; };
+		409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F53162680C6F600C2ADD7 /* LoginViewModel.swift */; };
+		409F531B2680C8C700C2ADD7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F531A2680C8C700C2ADD7 /* HomeView.swift */; };
+		409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F531C2680C95500C2ADD7 /* HomeViewModel.swift */; };
 		40A9EB23267B81290016FDEA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9EB22267B81290016FDEA /* LoginService.swift */; };
 		40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9EB25267B82320016FDEA /* NetworkService.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +46,9 @@
 		4086AB51267CD32E00A932F9 /* image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image7.png; sourceTree = "<group>"; };
 		4086AB52267CD32E00A932F9 /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image8.png; sourceTree = "<group>"; };
 		4086AB53267CD32E00A932F9 /* image9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image9.png; sourceTree = "<group>"; };
+		409F53162680C6F600C2ADD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		409F531A2680C8C700C2ADD7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		409F531C2680C95500C2ADD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		40A9EB22267B81290016FDEA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		40A9EB25267B82320016FDEA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +85,7 @@
 			children = (
 				40A9EB2A267B8A4C0016FDEA /* Resources */,
 				40A9EB21267B81120016FDEA /* Services */,
-				40238A37267246A400E1519F /* Login */,
+				409F53182680C8B200C2ADD7 /* Scenes */,
 				40238A292672468C00E1519F /* WWDC21App.swift */,
 				40238A2D2672468E00E1519F /* Assets.xcassets */,
 				40238A2F2672468E00E1519F /* Preview Content */,
@@ -99,8 +105,27 @@
 			isa = PBXGroup;
 			children = (
 				40238A38267246B300E1519F /* LoginView.swift */,
+				409F53162680C6F600C2ADD7 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		409F53182680C8B200C2ADD7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				409F53192680C8C000C2ADD7 /* Home */,
+				40238A37267246A400E1519F /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		409F53192680C8C000C2ADD7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				409F531A2680C8C700C2ADD7 /* HomeView.swift */,
+				409F531C2680C95500C2ADD7 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		40A9EB21267B81120016FDEA /* Services */ = {
@@ -211,7 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40238A39267246B300E1519F /* LoginView.swift in Sources */,
+				409F531B2680C8C700C2ADD7 /* HomeView.swift in Sources */,
 				40A9EB23267B81290016FDEA /* LoginService.swift in Sources */,
+				409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */,
+				409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */,
 				40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */,
 				40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */,
 				4086AB49267CD20400A932F9 /* ImageService.swift in Sources */,

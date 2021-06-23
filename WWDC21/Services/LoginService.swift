@@ -9,6 +9,7 @@ import Foundation
 
 protocol LoginService {
   func login(completion: @escaping (Bool, Error?) -> Void)
+  func login() async throws -> Bool
 }
 
 final class LoginServiceAdapter: LoginService {
@@ -27,5 +28,10 @@ final class LoginServiceAdapter: LoginService {
         completion(false, error)
       }
     }
+  }
+  
+  func login() async throws -> Bool {
+    let outcome = try NetworkService.shared.fetchRequest()
+    return outcome
   }
 }

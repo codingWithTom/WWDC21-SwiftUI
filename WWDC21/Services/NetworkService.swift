@@ -29,9 +29,10 @@ final class NetworkService {
   }
   
   func downloadImage(withURL url: URL) throws -> UIImage {
-    Thread.sleep(until: Date().addingTimeInterval(3))
+    Thread.sleep(until: Date().addingTimeInterval(0.25))
     
     if let image = UIImage(contentsOfFile: url.path) {
+      print("Download image with url: \(url.path)")
       return image
     } else {
       throw ImageError.imageNotFound
