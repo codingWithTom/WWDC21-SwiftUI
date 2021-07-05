@@ -24,7 +24,6 @@ struct HomeView: View {
       Spacer()
       button
     }
-    .navigationBarBackButtonHidden(true)
     .navigationTitle(Text("Home"))
   }
   

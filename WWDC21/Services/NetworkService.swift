@@ -19,6 +19,15 @@ enum ImageError: Error {
 
 final class NetworkService {
   static let shared = NetworkService()
+  private lazy var books: [Book] = [
+    Book(id: UUID(), name: "The Dark Tower", iconName: "building", color: .blue),
+    Book(id: UUID(), name: "Game of Thrones", iconName: "circle.hexagongrid", color: .brown),
+    Book(id: UUID(), name: "Harry Potter", iconName: "lasso.and.sparkles", color: .orange),
+    Book(id: UUID(), name: "Splinter Cell", iconName: "message.and.waveform", color: .cyan),
+    Book(id: UUID(), name: "The Lost Island", iconName: "location.north.circle", color: .teal),
+    Book(id: UUID(), name: "Treasure Island", iconName: "globe.asia.australia", color: .yellow),
+    Book(id: UUID(), name: "Coding With Tom", iconName: "swift", color: .green)
+  ]
   
   private init() {}
   
@@ -37,5 +46,10 @@ final class NetworkService {
     } else {
       throw ImageError.imageNotFound
     }
+  }
+  
+  func fetchBooks() -> [Book] {
+    Thread.sleep(until: Date().addingTimeInterval(3))
+    return books
   }
 }

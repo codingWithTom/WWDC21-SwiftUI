@@ -14,7 +14,7 @@ struct LoginView: View {
   var body: some View {
     NavigationView {
       ZStack {
-        NavigationLink("", destination: HomeView(), isActive: $viewModel.moveToNextView)
+        NavigationLink("", destination: WWDCTab(), isActive: $viewModel.moveToNextView)
         VStack {
           title
           canvas
