@@ -10,11 +10,11 @@ import SwiftUI
 struct LoginView: View {
   var colors = [Color.orange, .cyan, .brown, .pink, .yellow, .blue, .red, .green]
   @StateObject private var viewModel = LoginViewModel()
+  @Binding var isLoginSuccessful: Bool
   
   var body: some View {
     NavigationView {
       ZStack {
-        NavigationLink("", destination: HomeView(), isActive: $viewModel.moveToNextView)
         VStack {
           title
           canvas
@@ -29,6 +29,11 @@ struct LoginView: View {
         }
       }
       .navigationBarHidden(true)
+    }
+    .onReceive(viewModel.$moveToNextView) { moveToNextView in
+      withAnimation {
+        isLoginSuccessful = moveToNextView
+      }
     }
   }
   
@@ -127,6 +132,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
   static var previews: some View {
-    LoginView()
+    LoginView(isLoginSuccessful: .constant(false))
   }
 }
