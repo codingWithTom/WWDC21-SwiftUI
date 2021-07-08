@@ -32,6 +32,7 @@
 		40F936F82693858100A69B69 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936F72693858100A69B69 /* BooksView.swift */; };
 		40F936FA269388AE00A69B69 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936F9269388AE00A69B69 /* BookService.swift */; };
 		40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936FB269388EF00A69B69 /* BooksViewModel.swift */; };
+		40F936FF26938E4F00A69B69 /* RefreshIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936FE26938E4F00A69B69 /* RefreshIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		40F936F72693858100A69B69 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		40F936F9269388AE00A69B69 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		40F936FB269388EF00A69B69 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		40F936FE26938E4F00A69B69 /* RefreshIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		409F53182680C8B200C2ADD7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				40F936FD26938E4800A69B69 /* Views */,
 				40F936F42693854600A69B69 /* Books */,
 				409F53192680C8C000C2ADD7 /* Home */,
 				40238A37267246A400E1519F /* Login */,
@@ -184,6 +187,14 @@
 				40F936FB269388EF00A69B69 /* BooksViewModel.swift */,
 			);
 			path = Books;
+			sourceTree = "<group>";
+		};
+		40F936FD26938E4800A69B69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40F936FE26938E4F00A69B69 /* RefreshIndicator.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 				40A9EB23267B81290016FDEA /* LoginService.swift in Sources */,
 				40F936F82693858100A69B69 /* BooksView.swift in Sources */,
 				409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */,
+				40F936FF26938E4F00A69B69 /* RefreshIndicator.swift in Sources */,
 				409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */,
 				40F936F32693851A00A69B69 /* Book.swift in Sources */,
 				40F936F62693855000A69B69 /* WWDCTab.swift in Sources */,

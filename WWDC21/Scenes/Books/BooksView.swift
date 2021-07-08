@@ -11,11 +11,19 @@ struct BooksView: View {
   @StateObject private var viewModel = BooksViewModel()
   
   var body: some View {
-    content
-      .navigationTitle(Text("Books"))
-      .task {
-        viewModel.fetchBooks()
+    ZStack {
+      content
+      if viewModel.isRefreshing {
+        VStack {
+          RefreshIndicator()
+          Spacer()
+        }
       }
+    }
+    .navigationTitle(Text("Books"))
+    .task {
+      viewModel.fetchBooks()
+    }
   }
   
   @ViewBuilder

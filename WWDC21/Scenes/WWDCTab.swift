@@ -10,11 +10,15 @@ import SwiftUI
 struct WWDCTab: View {
   var body: some View {
     TabView {
-      HomeView()
+      NavigationView {
+        HomeView()
+      }
       .tabItem {
         Label("Home", systemImage: "house.fill")
       }
-      BooksView()
+      NavigationView {
+        BooksView()
+      }
         .tabItem {
           Label("Books", systemImage: "books.vertical.fill")
         }

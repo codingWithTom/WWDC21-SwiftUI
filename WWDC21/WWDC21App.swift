@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct WWDC21App: App {
-    var body: some Scene {
-        WindowGroup {
-            LoginView()
-        }
+  @State private var isLoginSuccessful: Bool = false
+  
+  var body: some Scene {
+    WindowGroup {
+      if isLoginSuccessful {
+         WWDCTab()
+          .transition(.slide)
+      } else {
+        LoginView(isLoginSuccessful: $isLoginSuccessful)
+          .transition(.slide)
+      }
     }
+  }
 }
