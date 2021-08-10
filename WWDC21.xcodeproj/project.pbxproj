@@ -25,6 +25,9 @@
 		409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F53162680C6F600C2ADD7 /* LoginViewModel.swift */; };
 		409F531B2680C8C700C2ADD7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F531A2680C8C700C2ADD7 /* HomeView.swift */; };
 		409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F531C2680C95500C2ADD7 /* HomeViewModel.swift */; };
+		40A8DA0126C01772004125F0 /* MotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8DA0026C01772004125F0 /* MotionView.swift */; };
+		40A8DA0326C01974004125F0 /* MotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8DA0226C01974004125F0 /* MotionViewModel.swift */; };
+		40A8DA0526C01BBD004125F0 /* MotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8DA0426C01BBD004125F0 /* MotionService.swift */; };
 		40A9EB23267B81290016FDEA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9EB22267B81290016FDEA /* LoginService.swift */; };
 		40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9EB25267B82320016FDEA /* NetworkService.swift */; };
 		40F936F32693851A00A69B69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936F22693851A00A69B69 /* Book.swift */; };
@@ -55,6 +58,9 @@
 		409F53162680C6F600C2ADD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		409F531A2680C8C700C2ADD7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		409F531C2680C95500C2ADD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		40A8DA0026C01772004125F0 /* MotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionView.swift; sourceTree = "<group>"; };
+		40A8DA0226C01974004125F0 /* MotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewModel.swift; sourceTree = "<group>"; };
+		40A8DA0426C01BBD004125F0 /* MotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionService.swift; sourceTree = "<group>"; };
 		40A9EB22267B81290016FDEA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		40A9EB25267B82320016FDEA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		40F936F22693851A00A69B69 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				40F936FD26938E4800A69B69 /* Views */,
 				40F936F42693854600A69B69 /* Books */,
 				409F53192680C8C000C2ADD7 /* Home */,
+				40A8D9FF26C01761004125F0 /* Motion */,
 				40238A37267246A400E1519F /* Login */,
 				40F936F52693855000A69B69 /* WWDCTab.swift */,
 			);
@@ -144,6 +151,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		40A8D9FF26C01761004125F0 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				40A8DA0026C01772004125F0 /* MotionView.swift */,
+				40A8DA0226C01974004125F0 /* MotionViewModel.swift */,
+			);
+			path = Motion;
+			sourceTree = "<group>";
+		};
 		40A9EB21267B81120016FDEA /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +167,7 @@
 				40A9EB25267B82320016FDEA /* NetworkService.swift */,
 				4086AB48267CD20400A932F9 /* ImageService.swift */,
 				40F936F9269388AE00A69B69 /* BookService.swift */,
+				40A8DA0426C01BBD004125F0 /* MotionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -278,6 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40238A39267246B300E1519F /* LoginView.swift in Sources */,
+				40A8DA0126C01772004125F0 /* MotionView.swift in Sources */,
+				40A8DA0326C01974004125F0 /* MotionViewModel.swift in Sources */,
 				409F531B2680C8C700C2ADD7 /* HomeView.swift in Sources */,
 				40A9EB23267B81290016FDEA /* LoginService.swift in Sources */,
 				40F936F82693858100A69B69 /* BooksView.swift in Sources */,
@@ -290,6 +309,7 @@
 				40F936FA269388AE00A69B69 /* BookService.swift in Sources */,
 				40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */,
 				40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */,
+				40A8DA0526C01BBD004125F0 /* MotionService.swift in Sources */,
 				4086AB49267CD20400A932F9 /* ImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WWDC21/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WWDC21/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

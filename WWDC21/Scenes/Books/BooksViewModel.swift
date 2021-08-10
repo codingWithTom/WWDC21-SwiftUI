@@ -15,7 +15,7 @@ final class BooksViewModel: ObservableObject {
   var bookService: BookService = BookServiceAdapter.shared
   
   func fetchBooks() {
-    async {
+    Task {
       let books = await bookService.getBooks()
       await MainActor.run {
         withAnimation {

@@ -17,7 +17,7 @@ final class ImageServiceAdapter: ImageService {
   static let shared = ImageServiceAdapter()
   
   private let queue = DispatchQueue(label: "Image queue", qos: .userInitiated)
-  private var downloadTask: Task.Handle<[UIImage], Error>?
+  private var downloadTask: Task<[UIImage], Error>?
   
   private init() {}
   
@@ -38,7 +38,7 @@ final class ImageServiceAdapter: ImageService {
   }
   
   func getImages() async throws -> [UIImage] {
-    let task: Task.Handle<[UIImage], Error> = async { [weak self] in
+    let task: Task<[UIImage], Error> = Task { [weak self] in
       guard let self = self else { return [] }
       var images: [UIImage] = []
       for index in (1 ... 10) {
@@ -51,7 +51,7 @@ final class ImageServiceAdapter: ImageService {
       return images
     }
     self.downloadTask = task
-    return try await task.get()
+    return try await task.value
   }
   
   func cancelDownload() {

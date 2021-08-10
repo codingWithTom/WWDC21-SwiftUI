@@ -17,7 +17,7 @@ final class LoginViewModel: ObservableObject {
   func didTapContinue() {
     isLoading = true
     errorMessage = nil
-    async {
+    Task {
       do {
         let success = try await loginService.login()
         await MainActor.run {
