@@ -15,7 +15,7 @@ final class HomeViewModel: ObservableObject {
   
   func didTapDownload() {
     isLoading = true
-    async {
+    Task {
       let images = try? await imageService.getImages()
       await MainActor.run {
         isLoading = false

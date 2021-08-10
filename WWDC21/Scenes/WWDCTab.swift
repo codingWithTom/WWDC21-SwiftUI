@@ -19,9 +19,15 @@ struct WWDCTab: View {
       NavigationView {
         BooksView()
       }
-        .tabItem {
-          Label("Books", systemImage: "books.vertical.fill")
-        }
+      .tabItem {
+        Label("Books", systemImage: "books.vertical.fill")
+      }
+      NavigationView {
+        MotionView()
+      }
+      .tabItem {
+        Label("Motion", systemImage: "circle.hexagonpath.fill")
+      }
     }
   }
 }
