@@ -11,6 +11,7 @@ import SwiftUI
 final class BooksViewModel: ObservableObject {
   @Published var books: [Book] = []
   @Published var isRefreshing: Bool = false
+  @Published var isShowingFocus: Bool = false
   
   var bookService: BookService = BookServiceAdapter.shared
   
@@ -21,6 +22,9 @@ final class BooksViewModel: ObservableObject {
         withAnimation {
           self.isRefreshing = false
           self.books = books
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            self?.isShowingFocus = true
+          }
         }
       }
     }

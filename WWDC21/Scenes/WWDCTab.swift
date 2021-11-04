@@ -28,6 +28,12 @@ struct WWDCTab: View {
       .tabItem {
         Label("Motion", systemImage: "circle.hexagonpath.fill")
       }
+      NavigationView {
+        DemoView()
+      }
+      .tabItem {
+        Label("Demo", systemImage: "dpad")
+      }
     }
   }
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401D74C02732124900D915FE /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74BF2732124900D915FE /* DemoView.swift */; };
+		401D74C22732131C00D915FE /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74C12732131C00D915FE /* Arrow.swift */; };
+		401D74C5273213EC00D915FE /* FocusAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74C4273213EC00D915FE /* FocusAlignment.swift */; };
+		401D74C72732152800D915FE /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74C62732152800D915FE /* ViewExtensions.swift */; };
+		401D74C9273215E600D915FE /* FocusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74C8273215E600D915FE /* FocusModifier.swift */; };
+		401D74CB2732168300D915FE /* FocusAreaModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74CA2732168300D915FE /* FocusAreaModifier.swift */; };
 		40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40238A292672468C00E1519F /* WWDC21App.swift */; };
 		40238A2E2672468E00E1519F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A2D2672468E00E1519F /* Assets.xcassets */; };
 		40238A312672468E00E1519F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A302672468E00E1519F /* Preview Assets.xcassets */; };
@@ -39,6 +45,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		401D74BF2732124900D915FE /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		401D74C12732131C00D915FE /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		401D74C4273213EC00D915FE /* FocusAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAlignment.swift; sourceTree = "<group>"; };
+		401D74C62732152800D915FE /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		401D74C8273215E600D915FE /* FocusModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModifier.swift; sourceTree = "<group>"; };
+		401D74CA2732168300D915FE /* FocusAreaModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAreaModifier.swift; sourceTree = "<group>"; };
 		40238A262672468C00E1519F /* WWDC21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40238A292672468C00E1519F /* WWDC21App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC21App.swift; sourceTree = "<group>"; };
 		40238A2D2672468E00E1519F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +94,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		401D74BE2732123900D915FE /* DemoView */ = {
+			isa = PBXGroup;
+			children = (
+				401D74C3273213E100D915FE /* Focus */,
+				401D74BF2732124900D915FE /* DemoView.swift */,
+				401D74C12732131C00D915FE /* Arrow.swift */,
+			);
+			path = DemoView;
+			sourceTree = "<group>";
+		};
+		401D74C3273213E100D915FE /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				401D74C4273213EC00D915FE /* FocusAlignment.swift */,
+				401D74C62732152800D915FE /* ViewExtensions.swift */,
+				401D74C8273215E600D915FE /* FocusModifier.swift */,
+				401D74CA2732168300D915FE /* FocusAreaModifier.swift */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
 		40238A1D2672468C00E1519F = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +170,7 @@
 				409F53192680C8C000C2ADD7 /* Home */,
 				40A8D9FF26C01761004125F0 /* Motion */,
 				40238A37267246A400E1519F /* Login */,
+				401D74BE2732123900D915FE /* DemoView */,
 				40F936F52693855000A69B69 /* WWDCTab.swift */,
 			);
 			path = Scenes;
@@ -295,18 +329,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				40238A39267246B300E1519F /* LoginView.swift in Sources */,
+				401D74C72732152800D915FE /* ViewExtensions.swift in Sources */,
+				401D74C22732131C00D915FE /* Arrow.swift in Sources */,
 				40A8DA0126C01772004125F0 /* MotionView.swift in Sources */,
 				40A8DA0326C01974004125F0 /* MotionViewModel.swift in Sources */,
+				401D74C9273215E600D915FE /* FocusModifier.swift in Sources */,
 				409F531B2680C8C700C2ADD7 /* HomeView.swift in Sources */,
 				40A9EB23267B81290016FDEA /* LoginService.swift in Sources */,
 				40F936F82693858100A69B69 /* BooksView.swift in Sources */,
 				409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */,
 				40F936FF26938E4F00A69B69 /* RefreshIndicator.swift in Sources */,
 				409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */,
+				401D74CB2732168300D915FE /* FocusAreaModifier.swift in Sources */,
+				401D74C5273213EC00D915FE /* FocusAlignment.swift in Sources */,
 				40F936F32693851A00A69B69 /* Book.swift in Sources */,
 				40F936F62693855000A69B69 /* WWDCTab.swift in Sources */,
 				40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */,
 				40F936FA269388AE00A69B69 /* BookService.swift in Sources */,
+				401D74C02732124900D915FE /* DemoView.swift in Sources */,
 				40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */,
 				40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */,
 				40A8DA0526C01BBD004125F0 /* MotionService.swift in Sources */,
