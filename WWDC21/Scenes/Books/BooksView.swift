@@ -24,6 +24,7 @@ struct BooksView: View {
     .task {
       viewModel.fetchBooks()
     }
+    .modifier(FocusAreaModifier())
   }
   
   @ViewBuilder
@@ -31,7 +32,16 @@ struct BooksView: View {
     if viewModel.books.isEmpty {
       ProgressView()
     } else {
-      booksList
+      VStack {
+        Button(action: {}) {
+          Image(systemName: "rectangle.and.pencil.and.ellipsis")
+        }
+        .modifier(FocusModifier(
+          condition: $viewModel.isShowingFocus,
+          position: .left)
+        )
+        booksList
+      }
     }
   }
   
