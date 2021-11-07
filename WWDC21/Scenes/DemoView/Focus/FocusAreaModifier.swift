@@ -22,7 +22,14 @@ struct FocusAreaModifier: ViewModifier {
       
       if viewModel.isShowingArrow {
         Arrow(direction: viewModel.focusPosition == .left ? .right : .left)
+          .fill(.blue)
           .frame(width: 50, height: 50)
+          .overlay(
+            Arrow(direction: viewModel.focusPosition == .left ? .right : .left)
+              .stroke(Color.black, lineWidth: 2.0)
+          )
+          .modifier(BackAndForthPulsatingAnimation(isOn: viewModel.isAnimating))
+          .animation(.linear(duration: 2.0).repeatForever(autoreverses: false), value: viewModel.isAnimating)
       }
     }
     .environmentObject(viewModel)
@@ -36,6 +43,7 @@ final class GlobalFocusAreaViewModel: ObservableObject {
   }
   @Published var isShowingArrow: Bool = false
   @Published var focusPosition: FocusPosition = .left
+  @Published var isAnimating: Bool = false
   private var showingArrowForFocusWithId: String?
   
   
@@ -45,9 +53,14 @@ final class GlobalFocusAreaViewModel: ObservableObject {
       isShowingArrow = true
       showingArrowForFocusWithId = id
       focusPosition = position
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+        self?.isAnimating = true
+      }
+      
     } else {
       if showingArrowForFocusWithId == id {
         isShowingArrow = false
+        isAnimating = false
         showingArrowForFocusWithId = nil
       }
     }
