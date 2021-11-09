@@ -11,6 +11,7 @@ import Combine
 struct FocusModifier: ViewModifier {
   @Binding var condition: Bool
   let position: FocusPosition
+  let animation: FocusAreaModifier.ArrowAnimation
   @StateObject private var viewModel = FocusModifierViewModel()
   @EnvironmentObject private var areaViewModel: GlobalFocusAreaViewModel
   private var horizontalAlignment: HorizontalAlignment {
@@ -28,7 +29,7 @@ struct FocusModifier: ViewModifier {
           .alignmentGuide(Alignment.focusVerticalAlignment) { $0[VerticalAlignment.center] }
       }
       .onChange(of: condition) { value in
-        areaViewModel.didChangeValue(value, forFocusWithID: viewModel.id, position: position)
+        areaViewModel.didChangeValue(value, forFocusWithID: viewModel.id, position: position, animation: animation)
         guard value else { return }
         viewModel.listenForChanges(with: areaViewModel)
       }

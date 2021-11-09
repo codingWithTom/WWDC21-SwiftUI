@@ -14,6 +14,12 @@ enum FocusPosition {
 }
 
 struct FocusAreaModifier: ViewModifier {
+  enum ArrowAnimation {
+    case pulsating
+    case backAndForth
+    case backAndForthPulsating
+  }
+  
   @StateObject private var viewModel = GlobalFocusAreaViewModel()
   
   func body(content: Content) -> some View {
@@ -28,7 +34,15 @@ struct FocusAreaModifier: ViewModifier {
             Arrow(direction: viewModel.focusPosition == .left ? .right : .left)
               .stroke(Color.black, lineWidth: 2.0)
           )
-          .modifier(BackAndForthPulsatingAnimation(isOn: viewModel.isAnimating))
+          .ifModifier(condition: viewModel.arrowAnimation == .backAndForthPulsating) { view in
+            view.modifier(BackAndForthPulsatingAnimation(isOn: viewModel.isAnimating))
+          }
+          .ifModifier(condition: viewModel.arrowAnimation == .pulsating) { view in
+            view.modifier(PulsatingAnimation(isOn: viewModel.isAnimating))
+          }
+          .ifModifier(condition: viewModel.arrowAnimation == .backAndForth) { view in
+            view.modifier(BackAndForthAnimation(isOn: viewModel.isAnimating))
+          }
           .animation(.linear(duration: 2.0).repeatForever(autoreverses: false), value: viewModel.isAnimating)
       }
     }
@@ -44,17 +58,19 @@ final class GlobalFocusAreaViewModel: ObservableObject {
   @Published var isShowingArrow: Bool = false
   @Published var focusPosition: FocusPosition = .left
   @Published var isAnimating: Bool = false
+  @Published var arrowAnimation: FocusAreaModifier.ArrowAnimation = .backAndForth
   private var showingArrowForFocusWithId: String?
   
   
-  func didChangeValue(_ value: Bool, forFocusWithID id: String, position: FocusPosition) {
+  func didChangeValue(_ value: Bool, forFocusWithID id: String, position: FocusPosition, animation: FocusAreaModifier.ArrowAnimation) {
     if value {
       currentFocusId.value = id
       isShowingArrow = true
       showingArrowForFocusWithId = id
       focusPosition = position
+      arrowAnimation = animation
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-        self?.isAnimating = true
+        self?.isAnimating.toggle()
       }
       
     } else {

@@ -38,7 +38,8 @@ struct BooksView: View {
         }
         .modifier(FocusModifier(
           condition: $viewModel.isShowingFocus,
-          position: .left)
+          position: .left,
+          animation: .backAndForth)
         )
         booksList
       }
