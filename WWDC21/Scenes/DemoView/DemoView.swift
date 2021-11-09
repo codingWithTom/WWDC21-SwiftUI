@@ -21,7 +21,8 @@ struct DemoView: View {
         }
         .modifier(FocusModifier(
           condition: $isShowingTopLeft,
-          position: .right
+          position: .right,
+          animation: .backAndForth
         ))
         
         Spacer()
@@ -31,7 +32,8 @@ struct DemoView: View {
         }
         .modifier(FocusModifier(
           condition: $isShowingTopRight,
-          position: .left
+          position: .left,
+          animation: .backAndForthPulsating
         ))
       }
       
@@ -43,7 +45,8 @@ struct DemoView: View {
         }
         .modifier(FocusModifier(
           condition: $isShowingBottomLeft,
-          position: .right
+          position: .right,
+          animation: .pulsating
         ))
         
         Spacer()
@@ -52,7 +55,9 @@ struct DemoView: View {
           Text("Bottom Right")
         }
         .modifier(FocusModifier(
-          condition: $isShowingBottomRight, position: .left
+          condition: $isShowingBottomRight,
+          position: .left,
+          animation: .backAndForth
         ))
       }
     }

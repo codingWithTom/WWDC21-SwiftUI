@@ -17,6 +17,9 @@
 		40238A2E2672468E00E1519F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A2D2672468E00E1519F /* Assets.xcassets */; };
 		40238A312672468E00E1519F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A302672468E00E1519F /* Preview Assets.xcassets */; };
 		40238A39267246B300E1519F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40238A38267246B300E1519F /* LoginView.swift */; };
+		407FB0FB2738416A0056CBF7 /* PulsatingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB0FA2738416A0056CBF7 /* PulsatingAnimation.swift */; };
+		407FB0FD273844630056CBF7 /* BackAndForthAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB0FC273844630056CBF7 /* BackAndForthAnimation.swift */; };
+		407FB0FF273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB0FE273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift */; };
 		4086AB49267CD20400A932F9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086AB48267CD20400A932F9 /* ImageService.swift */; };
 		4086AB54267CD32E00A932F9 /* image10.png in Resources */ = {isa = PBXBuildFile; fileRef = 4086AB4A267CD32E00A932F9 /* image10.png */; };
 		4086AB55267CD32E00A932F9 /* image5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4086AB4B267CD32E00A932F9 /* image5.png */; };
@@ -56,6 +59,9 @@
 		40238A2D2672468E00E1519F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40238A302672468E00E1519F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40238A38267246B300E1519F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		407FB0FA2738416A0056CBF7 /* PulsatingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatingAnimation.swift; sourceTree = "<group>"; };
+		407FB0FC273844630056CBF7 /* BackAndForthAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackAndForthAnimation.swift; sourceTree = "<group>"; };
+		407FB0FE273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackAndForthPulsatingAnimation.swift; sourceTree = "<group>"; };
 		4086AB48267CD20400A932F9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		4086AB4A267CD32E00A932F9 /* image10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image10.png; sourceTree = "<group>"; };
 		4086AB4B267CD32E00A932F9 /* image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image5.png; sourceTree = "<group>"; };
@@ -162,9 +168,20 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		407FB0F72738413E0056CBF7 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				407FB0FA2738416A0056CBF7 /* PulsatingAnimation.swift */,
+				407FB0FC273844630056CBF7 /* BackAndForthAnimation.swift */,
+				407FB0FE273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		409F53182680C8B200C2ADD7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				407FB0F72738413E0056CBF7 /* Animations */,
 				40F936FD26938E4800A69B69 /* Views */,
 				40F936F42693854600A69B69 /* Books */,
 				409F53192680C8C000C2ADD7 /* Home */,
@@ -331,6 +348,7 @@
 				40238A39267246B300E1519F /* LoginView.swift in Sources */,
 				401D74C72732152800D915FE /* ViewExtensions.swift in Sources */,
 				401D74C22732131C00D915FE /* Arrow.swift in Sources */,
+				407FB0FF273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift in Sources */,
 				40A8DA0126C01772004125F0 /* MotionView.swift in Sources */,
 				40A8DA0326C01974004125F0 /* MotionViewModel.swift in Sources */,
 				401D74C9273215E600D915FE /* FocusModifier.swift in Sources */,
@@ -339,6 +357,7 @@
 				40F936F82693858100A69B69 /* BooksView.swift in Sources */,
 				409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */,
 				40F936FF26938E4F00A69B69 /* RefreshIndicator.swift in Sources */,
+				407FB0FD273844630056CBF7 /* BackAndForthAnimation.swift in Sources */,
 				409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */,
 				401D74CB2732168300D915FE /* FocusAreaModifier.swift in Sources */,
 				401D74C5273213EC00D915FE /* FocusAlignment.swift in Sources */,
@@ -346,6 +365,7 @@
 				40F936F62693855000A69B69 /* WWDCTab.swift in Sources */,
 				40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */,
 				40F936FA269388AE00A69B69 /* BookService.swift in Sources */,
+				407FB0FB2738416A0056CBF7 /* PulsatingAnimation.swift in Sources */,
 				401D74C02732124900D915FE /* DemoView.swift in Sources */,
 				40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */,
 				40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */,
