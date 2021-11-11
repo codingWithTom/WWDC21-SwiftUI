@@ -18,6 +18,9 @@ struct FocusAreaModifier: ViewModifier {
     case pulsating
     case backAndForth
     case backAndForthPulsating
+    case spinning
+    case rotatingAndSpinning
+    case wheel
   }
   
   @StateObject private var viewModel = GlobalFocusAreaViewModel()
@@ -42,6 +45,15 @@ struct FocusAreaModifier: ViewModifier {
           }
           .ifModifier(condition: viewModel.arrowAnimation == .backAndForth) { view in
             view.modifier(BackAndForthAnimation(isOn: viewModel.isAnimating))
+          }
+          .ifModifier(condition: viewModel.arrowAnimation == .spinning) { view in
+            view.modifier(SpinningAnimation(isOn: viewModel.isAnimating))
+          }
+          .ifModifier(condition: viewModel.arrowAnimation == .rotatingAndSpinning) { view in
+              view.modifier(RotatingAndSpinningAnimation(isOn: viewModel.isAnimating))
+          }
+          .ifModifier(condition: viewModel.arrowAnimation == .wheel) { view in
+            view.modifier(WheelAnimation(isOn: viewModel.isAnimating))
           }
           .animation(.linear(duration: 2.0).repeatForever(autoreverses: false), value: viewModel.isAnimating)
       }
