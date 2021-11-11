@@ -22,7 +22,7 @@ struct DemoView: View {
         .modifier(FocusModifier(
           condition: $isShowingTopLeft,
           position: .right,
-          animation: .backAndForth
+          animation: .rotatingAndSpinning
         ))
         
         Spacer()
@@ -33,7 +33,7 @@ struct DemoView: View {
         .modifier(FocusModifier(
           condition: $isShowingTopRight,
           position: .left,
-          animation: .backAndForthPulsating
+          animation: .spinning
         ))
       }
       
@@ -46,7 +46,7 @@ struct DemoView: View {
         .modifier(FocusModifier(
           condition: $isShowingBottomLeft,
           position: .right,
-          animation: .pulsating
+          animation: .wheel
         ))
         
         Spacer()
