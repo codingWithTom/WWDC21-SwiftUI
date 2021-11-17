@@ -39,6 +39,8 @@
 		40A8DA0526C01BBD004125F0 /* MotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8DA0426C01BBD004125F0 /* MotionService.swift */; };
 		40A9EB23267B81290016FDEA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9EB22267B81290016FDEA /* LoginService.swift */; };
 		40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9EB25267B82320016FDEA /* NetworkService.swift */; };
+		40B33441273DEE4E0070E309 /* ExpandingShakingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B33440273DEE4E0070E309 /* ExpandingShakingAnimation.swift */; };
+		40B33443273DF4A70070E309 /* TiltingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B33442273DF4A70070E309 /* TiltingAnimation.swift */; };
 		40DE9498273B539400F39DA2 /* SpinningAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE9497273B539400F39DA2 /* SpinningAnimation.swift */; };
 		40DE949A273B55B400F39DA2 /* RotatingAndSpinningAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE9499273B55B400F39DA2 /* RotatingAndSpinningAnimation.swift */; };
 		40DE949E273B569200F39DA2 /* WheelAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE949D273B569200F39DA2 /* WheelAnimation.swift */; };
@@ -84,6 +86,8 @@
 		40A8DA0426C01BBD004125F0 /* MotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionService.swift; sourceTree = "<group>"; };
 		40A9EB22267B81290016FDEA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		40A9EB25267B82320016FDEA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		40B33440273DEE4E0070E309 /* ExpandingShakingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingShakingAnimation.swift; sourceTree = "<group>"; };
+		40B33442273DF4A70070E309 /* TiltingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltingAnimation.swift; sourceTree = "<group>"; };
 		40DE9497273B539400F39DA2 /* SpinningAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinningAnimation.swift; sourceTree = "<group>"; };
 		40DE9499273B55B400F39DA2 /* RotatingAndSpinningAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingAndSpinningAnimation.swift; sourceTree = "<group>"; };
 		40DE949D273B569200F39DA2 /* WheelAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelAnimation.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				40DE9497273B539400F39DA2 /* SpinningAnimation.swift */,
 				40DE9499273B55B400F39DA2 /* RotatingAndSpinningAnimation.swift */,
 				40DE949D273B569200F39DA2 /* WheelAnimation.swift */,
+				40B33440273DEE4E0070E309 /* ExpandingShakingAnimation.swift */,
+				40B33442273DF4A70070E309 /* TiltingAnimation.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B33443273DF4A70070E309 /* TiltingAnimation.swift in Sources */,
 				40238A39267246B300E1519F /* LoginView.swift in Sources */,
 				401D74C72732152800D915FE /* ViewExtensions.swift in Sources */,
 				401D74C22732131C00D915FE /* Arrow.swift in Sources */,
@@ -375,6 +382,7 @@
 				40F936F62693855000A69B69 /* WWDCTab.swift in Sources */,
 				40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */,
 				40F936FA269388AE00A69B69 /* BookService.swift in Sources */,
+				40B33441273DEE4E0070E309 /* ExpandingShakingAnimation.swift in Sources */,
 				407FB0FB2738416A0056CBF7 /* PulsatingAnimation.swift in Sources */,
 				401D74C02732124900D915FE /* DemoView.swift in Sources */,
 				40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */,

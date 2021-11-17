@@ -10,11 +10,14 @@ import SwiftUI
 struct HomeView: View {
   
   @StateObject private var viewModel = HomeViewModel()
+  @State private var isAnimating = false
   
   var body: some View {
     VStack {
       Text("Welcome Developer!")
         .font(.title)
+        .modifier(TiltingAnimation(isOn: isAnimating))
+        .animation(.linear(duration: 0.5).delay(1.0).repeatForever(autoreverses: false), value: isAnimating)
       Spacer()
       if viewModel.isLoading {
         ProgressView()
@@ -23,8 +26,15 @@ struct HomeView: View {
       }
       Spacer()
       button
+        .modifier(ExpandingShakingAnimation(isOn: isAnimating))
+        .animation(.linear(duration: 1.25).repeatForever(autoreverses: false), value: isAnimating)
     }
     .navigationTitle(Text("Home"))
+    .onAppear {
+      DispatchQueue.main.async {
+        isAnimating = true
+      }
+    }
   }
   
   private var content: some View {
@@ -57,7 +67,7 @@ struct HomeView: View {
           .font(.title2)
           .foregroundColor(.black)
           .padding()
-          .background(.yellow, in: Capsule())
+          .background(.yellow, in: Rectangle())
       }
     }
   }
