@@ -50,6 +50,10 @@
 		40F936FA269388AE00A69B69 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936F9269388AE00A69B69 /* BookService.swift */; };
 		40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936FB269388EF00A69B69 /* BooksViewModel.swift */; };
 		40F936FF26938E4F00A69B69 /* RefreshIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F936FE26938E4F00A69B69 /* RefreshIndicator.swift */; };
+		40F9B7E82745E6410019CB08 /* SplitModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9B7E72745E6410019CB08 /* SplitModifier.swift */; };
+		40F9B7EA2745ED060019CB08 /* SplitEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9B7E92745ED060019CB08 /* SplitEffect.swift */; };
+		40F9B7EC2745ED170019CB08 /* Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9B7EB2745ED160019CB08 /* Corner.swift */; };
+		40F9B7EE2745EEE30019CB08 /* SplitRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9B7ED2745EEE30019CB08 /* SplitRect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +101,10 @@
 		40F936F9269388AE00A69B69 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		40F936FB269388EF00A69B69 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		40F936FE26938E4F00A69B69 /* RefreshIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshIndicator.swift; sourceTree = "<group>"; };
+		40F9B7E72745E6410019CB08 /* SplitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitModifier.swift; sourceTree = "<group>"; };
+		40F9B7E92745ED060019CB08 /* SplitEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitEffect.swift; sourceTree = "<group>"; };
+		40F9B7EB2745ED160019CB08 /* Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Corner.swift; sourceTree = "<group>"; };
+		40F9B7ED2745EEE30019CB08 /* SplitRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitRect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +204,7 @@
 		409F53182680C8B200C2ADD7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				40F9B7E62745E6370019CB08 /* SplitModifier */,
 				407FB0F72738413E0056CBF7 /* Animations */,
 				40F936FD26938E4800A69B69 /* Views */,
 				40F936F42693854600A69B69 /* Books */,
@@ -278,6 +287,17 @@
 				40F936FE26938E4F00A69B69 /* RefreshIndicator.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		40F9B7E62745E6370019CB08 /* SplitModifier */ = {
+			isa = PBXGroup;
+			children = (
+				40F9B7E72745E6410019CB08 /* SplitModifier.swift */,
+				40F9B7EB2745ED160019CB08 /* Corner.swift */,
+				40F9B7E92745ED060019CB08 /* SplitEffect.swift */,
+				40F9B7ED2745EEE30019CB08 /* SplitRect.swift */,
+			);
+			path = SplitModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +389,8 @@
 				40A8DA0326C01974004125F0 /* MotionViewModel.swift in Sources */,
 				401D74C9273215E600D915FE /* FocusModifier.swift in Sources */,
 				409F531B2680C8C700C2ADD7 /* HomeView.swift in Sources */,
+				40F9B7E82745E6410019CB08 /* SplitModifier.swift in Sources */,
+				40F9B7EC2745ED170019CB08 /* Corner.swift in Sources */,
 				40A9EB23267B81290016FDEA /* LoginService.swift in Sources */,
 				40F936F82693858100A69B69 /* BooksView.swift in Sources */,
 				409F531D2680C95500C2ADD7 /* HomeViewModel.swift in Sources */,
@@ -383,11 +405,13 @@
 				40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */,
 				40F936FA269388AE00A69B69 /* BookService.swift in Sources */,
 				40B33441273DEE4E0070E309 /* ExpandingShakingAnimation.swift in Sources */,
+				40F9B7EA2745ED060019CB08 /* SplitEffect.swift in Sources */,
 				407FB0FB2738416A0056CBF7 /* PulsatingAnimation.swift in Sources */,
 				401D74C02732124900D915FE /* DemoView.swift in Sources */,
 				40A9EB26267B82320016FDEA /* NetworkService.swift in Sources */,
 				40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */,
 				40A8DA0526C01BBD004125F0 /* MotionService.swift in Sources */,
+				40F9B7EE2745EEE30019CB08 /* SplitRect.swift in Sources */,
 				40DE949E273B569200F39DA2 /* WheelAnimation.swift in Sources */,
 				40DE949A273B55B400F39DA2 /* RotatingAndSpinningAnimation.swift in Sources */,
 				4086AB49267CD20400A932F9 /* ImageService.swift in Sources */,
