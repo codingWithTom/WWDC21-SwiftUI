@@ -42,10 +42,12 @@ struct LoginView: View {
     if viewModel.isLoading {
       ProgressView()
     } else {
-      Button(action: { viewModel.didTapContinue() }) {
-        Text("Continue")
-          .font(.largeTitle)
-      }
+      Text("Continue")
+        .font(.largeTitle)
+        .padding()
+        .background(Color.orange)
+        .clipShape(Capsule())
+        .modifier(SplitModifier() { viewModel.didTapContinue() })
     }
   }
   
