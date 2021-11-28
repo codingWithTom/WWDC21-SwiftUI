@@ -26,8 +26,6 @@ struct HomeView: View {
       }
       Spacer()
       button
-        .modifier(ExpandingShakingAnimation(isOn: isAnimating))
-        .animation(.linear(duration: 1.25).repeatForever(autoreverses: false), value: isAnimating)
     }
     .navigationTitle(Text("Home"))
     .onAppear {
@@ -49,6 +47,9 @@ struct HomeView: View {
     }
   }
   
+  @Namespace private var downloadButtonNamespace
+  private let downloadButtonID = UUID()
+  
   @ViewBuilder
   private var button: some View {
     if viewModel.isLoading {
@@ -60,15 +61,28 @@ struct HomeView: View {
           .background(.white, in: Capsule())
           .shadow(radius: 2)
       }
+      .matchedGeometryEffect(
+        id: downloadButtonID, in: downloadButtonNamespace,
+        properties: .frame, anchor: .center
+      )
     }
     else {
       Button(action: { viewModel.didTapDownload() }) {
-        Text("Download")
-          .font(.title2)
-          .foregroundColor(.black)
-          .padding()
-          .background(.yellow, in: Rectangle())
+        HStack {
+          Spacer()
+          Text("Download")
+            .font(.title2)
+            .foregroundColor(.black)
+          Spacer()
+        }
+        .padding()
+        .background(.yellow, in: Capsule())
       }
+      .padding(.horizontal)
+      .matchedGeometryEffect(
+        id: downloadButtonID, in: downloadButtonNamespace,
+        properties: .frame, anchor: .center
+      )
     }
   }
 }

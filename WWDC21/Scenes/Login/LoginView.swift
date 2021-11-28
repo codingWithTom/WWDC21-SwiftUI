@@ -11,6 +11,8 @@ struct LoginView: View {
   var colors = [Color.orange, .cyan, .brown, .pink, .yellow, .blue, .red, .green]
   @StateObject private var viewModel = LoginViewModel()
   @Binding var isLoginSuccessful: Bool
+  @State private var isShowingTermsDetail = false
+  @Namespace private var termsNamespace
   
   var body: some View {
     NavigationView {
@@ -25,7 +27,19 @@ struct LoginView: View {
               .foregroundColor(.red)
           }
           Spacer()
-          terms
+          if !isShowingTermsDetail {
+            terms
+              .matchedGeometryEffect(id: "Terms", in: termsNamespace,
+                                     properties: [.position, .size],
+                                     isSource: true
+              )
+          }
+        }
+        if isShowingTermsDetail {
+          termsDetail
+            .matchedGeometryEffect(id: "Terms", in: termsNamespace,
+                                   properties: [.position, .size]
+            )
         }
       }
       .navigationBarHidden(true)
@@ -56,6 +70,8 @@ struct LoginView: View {
       Text("Codign With Tom")
         .font(.title)
       Spacer()
+      Image(systemName: "applelogo")
+        .matchedGeometryEffect(id: "logo", in: termsNamespace)
     }
     .padding()
     .background(.cyan, in: RoundedRectangle(cornerRadius: 6))
@@ -66,6 +82,9 @@ struct LoginView: View {
     HStack {
       Spacer()
       Text("By tapping \(Text("continue").bold()) you agree to our \(termsText)")
+        .onTapGesture {
+          withAnimation { isShowingTermsDetail = true }
+        }
       Spacer()
     }
     .padding()
@@ -129,6 +148,29 @@ struct LoginView: View {
   private var iconText: Text {
     Text("📱")
       .font(.largeTitle)
+  }
+  
+  private var termsDetail: some View {
+    VStack(spacing: 20) {
+      HStack {
+        Button(action: { withAnimation { isShowingTermsDetail = false } }) {
+          Image(systemName: "multiply")
+        }
+        .matchedGeometryEffect(id: "logo", in: termsNamespace)
+        Spacer()
+        Text("Terms & Conditions")
+          .font(.title2)
+        Spacer()
+      }
+      ScrollView {
+        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
+      }
+    }
+    .padding()
+    .background(Color.white)
+    .cornerRadius(10)
+    .shadow(radius: 10)
+    .padding(40)
   }
 }
 
