@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class HomeViewModel: ObservableObject {
   @Published var images: [UIImage] = []
@@ -14,11 +15,11 @@ final class HomeViewModel: ObservableObject {
   var imageService: ImageService = ImageServiceAdapter.shared
   
   func didTapDownload() {
-    isLoading = true
+    withAnimation { isLoading = true }
     Task {
       let images = try? await imageService.getImages()
       await MainActor.run {
-        isLoading = false
+        withAnimation { isLoading = false }
         self.images = images ?? []
       }
     }
