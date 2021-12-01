@@ -19,9 +19,11 @@ struct LoginView: View {
       ZStack {
         VStack {
           title
+            .modifier(SnowEffect())
           canvas
           Spacer()
           continueButton
+            .modifier(SnowEffect())
           if let message = viewModel.errorMessage {
             Text(message)
               .foregroundColor(.red)

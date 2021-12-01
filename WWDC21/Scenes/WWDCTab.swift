@@ -12,6 +12,7 @@ struct WWDCTab: View {
     TabView {
       NavigationView {
         HomeView()
+          .modifier(SnowEffect())
       }
       .tabItem {
         Label("Home", systemImage: "house.fill")
