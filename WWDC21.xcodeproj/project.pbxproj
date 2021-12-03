@@ -13,6 +13,7 @@
 		401D74C72732152800D915FE /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74C62732152800D915FE /* ViewExtensions.swift */; };
 		401D74C9273215E600D915FE /* FocusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74C8273215E600D915FE /* FocusModifier.swift */; };
 		401D74CB2732168300D915FE /* FocusAreaModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D74CA2732168300D915FE /* FocusAreaModifier.swift */; };
+		40203A092759AABB00AF6BCA /* FireworksEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40203A082759AABB00AF6BCA /* FireworksEffect.swift */; };
 		40238A2A2672468C00E1519F /* WWDC21App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40238A292672468C00E1519F /* WWDC21App.swift */; };
 		40238A2E2672468E00E1519F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A2D2672468E00E1519F /* Assets.xcassets */; };
 		40238A312672468E00E1519F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A302672468E00E1519F /* Preview Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		401D74C62732152800D915FE /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		401D74C8273215E600D915FE /* FocusModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModifier.swift; sourceTree = "<group>"; };
 		401D74CA2732168300D915FE /* FocusAreaModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAreaModifier.swift; sourceTree = "<group>"; };
+		40203A082759AABB00AF6BCA /* FireworksEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksEffect.swift; sourceTree = "<group>"; };
 		40238A262672468C00E1519F /* WWDC21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40238A292672468C00E1519F /* WWDC21App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC21App.swift; sourceTree = "<group>"; };
 		40238A2D2672468E00E1519F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				40B38F2F2755C1A000FFCF74 /* SnowEffect.swift */,
+				40203A082759AABB00AF6BCA /* FireworksEffect.swift */,
 			);
 			path = Effects;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				409F53172680C6F600C2ADD7 /* LoginViewModel.swift in Sources */,
 				401D74CB2732168300D915FE /* FocusAreaModifier.swift in Sources */,
 				401D74C5273213EC00D915FE /* FocusAlignment.swift in Sources */,
+				40203A092759AABB00AF6BCA /* FireworksEffect.swift in Sources */,
 				40F936F32693851A00A69B69 /* Book.swift in Sources */,
 				40F936F62693855000A69B69 /* WWDCTab.swift in Sources */,
 				40F936FC269388EF00A69B69 /* BooksViewModel.swift in Sources */,

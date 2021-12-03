@@ -21,9 +21,10 @@ struct LoginView: View {
           title
             .modifier(SnowEffect())
           canvas
+            .modifier(FireworksEffect(numberOfFireworks: 20))
           Spacer()
           continueButton
-            .modifier(SnowEffect())
+            .modifier(FireworksEffect(numberOfFireworks: 30))
           if let message = viewModel.errorMessage {
             Text(message)
               .foregroundColor(.red)
