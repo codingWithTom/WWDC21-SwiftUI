@@ -24,7 +24,6 @@ struct BooksView: View {
     .task {
       viewModel.fetchBooks()
     }
-    .modifier(FocusAreaModifier())
   }
   
   @ViewBuilder
@@ -33,41 +32,35 @@ struct BooksView: View {
       ProgressView()
     } else {
       VStack {
-        Button(action: {}) {
-          Image(systemName: "rectangle.and.pencil.and.ellipsis")
-        }
-        .modifier(FocusModifier(
-          condition: $viewModel.isShowingFocus,
-          position: .left,
-          animation: .backAndForth)
-        )
         booksList
       }
     }
   }
   
   private var booksList: some View {
-    List {
-      ForEach($viewModel.books) { $book in
-        BookRow(book: book)
-          .swipeActions {
-            Button(action: { }) {
-              Label("Pin", systemImage: "pin")
+    CWTScrollView {
+      VStack {
+        ForEach($viewModel.books) { $book in
+          BookRow(book: book)
+            .swipeActions {
+              Button(action: { }) {
+                Label("Pin", systemImage: "pin")
+              }
+              .tint(.orange)
+              Button(role: .destructive, action: { withAnimation { viewModel.remove(book) } }) {
+                Label("Delete", systemImage: "trash.fill")
+              }
             }
-            .tint(.orange)
-            Button(role: .destructive, action: { withAnimation { viewModel.remove(book) } }) {
-              Label("Delete", systemImage: "trash.fill")
+            .swipeActions(edge: .leading) {
+              Button(action: { book.isRead.toggle() }) {
+                Label(book.isRead ? "Mark Unread" : "Mark Read",
+                      systemImage: book.isRead ? "book" : "text.book.closed")
+              }
+              .tint(.purple)
             }
-          }
-          .swipeActions(edge: .leading) {
-            Button(action: { book.isRead.toggle() }) {
-              Label(book.isRead ? "Mark Unread" : "Mark Read",
-                    systemImage: book.isRead ? "book" : "text.book.closed")
-            }
-            .tint(.purple)
-          }
+        }
       }
-      .listRowSeparator(.hidden)
+      .padding(.horizontal)
     }
     .refreshable {
       viewModel.refresh()
