@@ -36,7 +36,7 @@ struct SplitModifier: ViewModifier {
         guard !isTapped else { return }
         isTapped = true
         withAnimation { isAnimating = true }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
           action()
         }
       }

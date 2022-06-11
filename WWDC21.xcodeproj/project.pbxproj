@@ -18,6 +18,7 @@
 		40238A2E2672468E00E1519F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A2D2672468E00E1519F /* Assets.xcassets */; };
 		40238A312672468E00E1519F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40238A302672468E00E1519F /* Preview Assets.xcassets */; };
 		40238A39267246B300E1519F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40238A38267246B300E1519F /* LoginView.swift */; };
+		4066BED428501FC4009BF958 /* CWTScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066BED328501FC4009BF958 /* CWTScrollView.swift */; };
 		407FB0FB2738416A0056CBF7 /* PulsatingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB0FA2738416A0056CBF7 /* PulsatingAnimation.swift */; };
 		407FB0FD273844630056CBF7 /* BackAndForthAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB0FC273844630056CBF7 /* BackAndForthAnimation.swift */; };
 		407FB0FF273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407FB0FE273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift */; };
@@ -71,6 +72,7 @@
 		40238A2D2672468E00E1519F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40238A302672468E00E1519F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40238A38267246B300E1519F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4066BED328501FC4009BF958 /* CWTScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWTScrollView.swift; sourceTree = "<group>"; };
 		407FB0FA2738416A0056CBF7 /* PulsatingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatingAnimation.swift; sourceTree = "<group>"; };
 		407FB0FC273844630056CBF7 /* BackAndForthAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackAndForthAnimation.swift; sourceTree = "<group>"; };
 		407FB0FE273846A90056CBF7 /* BackAndForthPulsatingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackAndForthPulsatingAnimation.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4066BED228501FBA009BF958 /* CWTScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4066BED328501FC4009BF958 /* CWTScrollView.swift */,
+			);
+			path = CWTScrollView;
+			sourceTree = "<group>";
+		};
 		407FB0F72738413E0056CBF7 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +218,7 @@
 		409F53182680C8B200C2ADD7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4066BED228501FBA009BF958 /* CWTScrollView */,
 				40B38F2E2755C19800FFCF74 /* Effects */,
 				40F9B7E62745E6370019CB08 /* SplitModifier */,
 				407FB0F72738413E0056CBF7 /* Animations */,
@@ -430,6 +441,7 @@
 				40F9B7EE2745EEE30019CB08 /* SplitRect.swift in Sources */,
 				40DE949E273B569200F39DA2 /* WheelAnimation.swift in Sources */,
 				40DE949A273B55B400F39DA2 /* RotatingAndSpinningAnimation.swift in Sources */,
+				4066BED428501FC4009BF958 /* CWTScrollView.swift in Sources */,
 				4086AB49267CD20400A932F9 /* ImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

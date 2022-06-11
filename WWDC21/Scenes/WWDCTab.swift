@@ -19,7 +19,6 @@ struct WWDCTab: View {
       }
       NavigationView {
         BooksView()
-          .modifier(FireworksEffect(numberOfFireworks: 10))
       }
       .tabItem {
         Label("Books", systemImage: "books.vertical.fill")

@@ -49,7 +49,7 @@ final class NetworkService {
   }
   
   func fetchBooks() -> [Book] {
-    Thread.sleep(until: Date().addingTimeInterval(3))
+    Thread.sleep(until: Date().addingTimeInterval(1))
     return books
   }
 }
